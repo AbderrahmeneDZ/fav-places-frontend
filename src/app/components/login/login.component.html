@@ -1,0 +1,24 @@
+<div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-md-center">
+        <div class="col-5">
+            <div class="card p-3">
+                <h3 class="text-center mt-2">Login</h3>
+                <form [formGroup]="form">
+                    <mat-form-field class="w-100 mb-1">
+                        <input matInput formControlName="email" placeholder="Email" type="email">
+                        <mat-error *ngIf="email.invalid">please enter a valid email.</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="w-100 mb-1">
+                        <input matInput formControlName="password" placeholder="Password" type="password">
+                        <mat-error *ngIf="email.invalid">password should have a least 6 characters length.
+                        </mat-error>
+                    </mat-form-field>
+                    <button [disabled]="form.invalid" mat-stroked-button color="primary" class="w-100"
+                        (click)="onSubmit()">Login</button>
+                    <a mat-flat-button routerLink="/register" class="float-right">don't have account yet ? create
+                        account</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
