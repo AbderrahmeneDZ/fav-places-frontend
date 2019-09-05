@@ -1,5 +1,6 @@
 <div #mapContainer class="h-100">
-    <agm-map [style.height.px]="mapHeight" [latitude]="lat" [longitude]="lng" (mapClick)="onMapClicked($event)">
-        <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng"></agm-marker>
+    <agm-map class="w-100" [style.height.px]="mapHeight" [latitude]="lat" [longitude]="lng"
+        (mapClick)="onMapClicked($event)" [zoom]="4">
+        <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng"></agm-marker>
     </agm-map>
 </div>

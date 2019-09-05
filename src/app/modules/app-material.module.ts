@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { LocationFormComponent } from '../components/location-form/location-form.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const modules = [
   BrowserAnimationsModule,
@@ -16,7 +17,8 @@ const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatButtonModule,
-  MatBottomSheetModule
+  MatBottomSheetModule,
+  MatSnackBarModule
 ]
 
 @NgModule({

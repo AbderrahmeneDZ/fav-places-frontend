@@ -20,7 +20,7 @@
                             passwords should match.
                         </mat-error>
                     </mat-form-field>
-                    <button [disabled]="form.invalid" mat-stroked-button color="primary" class="w-100"
+                    <button [disabled]="form.invalid || inOnProgress" mat-stroked-button color="primary" class="w-100"
                         (click)="onSubmit()">Register</button>
                     <a mat-flat-button routerLink="/login" class="float-right">already have account ? login</a>
                 </form>

@@ -10,6 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AgmCoreModule } from '@agm/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocationFormComponent } from './components/location-form/location-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,8 @@ import { LocationFormComponent } from './components/location-form/location-form.
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
-    LocationFormComponent
+    LocationFormComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { LocationFormComponent } from './components/location-form/location-form.
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJIYyo89Pmo_Lj04ekA9wZ7Cfusp564Tk'
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

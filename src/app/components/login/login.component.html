@@ -13,7 +13,7 @@
                         <mat-error *ngIf="email.invalid">password should have a least 6 characters length.
                         </mat-error>
                     </mat-form-field>
-                    <button [disabled]="form.invalid" mat-stroked-button color="primary" class="w-100"
+                    <button [disabled]="form.invalid || inOnProgress" mat-stroked-button color="primary" class="w-100"
                         (click)="onSubmit()">Login</button>
                     <a mat-flat-button routerLink="/register" class="float-right">don't have account yet ? create
                         account</a>
