@@ -14,7 +14,6 @@ export class PlacesService {
   getFavoriteLocations() {
     return this.http.get('http://localhost:3000/api/places', { headers: this.headers })
       .pipe(map(response => {
-        console.log(response)
         return response['places']
       }));
   }

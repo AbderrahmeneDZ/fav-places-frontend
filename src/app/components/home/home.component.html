@@ -1,6 +1,27 @@
-<div #mapContainer class="h-100">
-    <agm-map class="w-100" [style.height.px]="mapHeight" [latitude]="lat" [longitude]="lng"
-        (mapClick)="onMapClicked($event)" [zoom]="4">
-        <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng"></agm-marker>
-    </agm-map>
+<div id="wrapper" class="h-100">
+    <div #mapContainer class="h-100">
+        <agm-map class="w-100" [style.height.px]="mapHeight" [latitude]="lat" [longitude]="lng"
+            (mapClick)="onMapClicked($event)" [zoom]="4">
+            <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng">
+                <agm-snazzy-info-window [maxWidth]="600" maxHeight="200px" padding="5px" [closeWhenOthersOpen]="true">
+                    <ng-template>
+                        <div class="w-100">
+                            <h6 class="lead"><b>{{place.title}}</b></h6>
+                            <p class="text-justify">{{place.description}}</p>
+                        </div>
+                    </ng-template>
+                </agm-snazzy-info-window>
+            </agm-marker>
+        </agm-map>
+    </div>
+    <div *ngIf="showInfoDive" id="over_map" class="w-100">
+        <div class="row justify-content-md-center">
+            <div class="col-4">
+                <div class="alert alert-info" role="alert">
+                    Click on the map to save your favorite position. <mat-icon (click)="hideInfoDiv()"
+                        class="float-right">close</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

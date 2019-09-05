@@ -38,3 +38,9 @@ textarea{
 a {
     cursor: pointer;
 }
+
+
+.si-wrapper-top{
+    width: 400px!important;
+    height: auto;
+}

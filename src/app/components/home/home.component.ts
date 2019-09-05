@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   mapHeight = 500;
 
   places: Place[] = []
+  showInfoDive: boolean = true
 
   @ViewChild("mapContainer", { static: false }) mapContainer: ElementRef;
 
@@ -62,6 +63,10 @@ export class HomeComponent implements OnInit {
         })
       }
     })
+  }
+
+  hideInfoDiv() {
+    this.showInfoDive = false
   }
 
 }

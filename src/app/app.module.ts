@@ -12,6 +12,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LocationFormComponent } from './components/location-form/location-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJIYyo89Pmo_Lj04ekA9wZ7Cfusp564Tk'
     }),
+    AgmSnazzyInfoWindowModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
