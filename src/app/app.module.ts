@@ -30,7 +30,7 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     AppRoutingModule,
     AppMaterialModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDJIYyo89Pmo_Lj04ekA9wZ7Cfusp564Tk'
+      apiKey: 'ENTER_YOUR_API_KEY'
     }),
     AgmSnazzyInfoWindowModule,
     ReactiveFormsModule,
